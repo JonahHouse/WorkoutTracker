@@ -14,16 +14,16 @@ app.use(express.static("public"));
 app.use(router)
 
 
-mongoose.connect('mongodb://localhost/workout', {
+mongoose.connect('mongodb://root:rooter1@ds059195.mlab.com:59195/heroku_58g3jgv9', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
 
 
-.then(() => console.log('connected to MongoDB...'))
-.catch(err => console.error('Could not connect to Mongo DB', err))
+    .then(() => console.log('connected to MongoDB...'))
+    .catch(err => console.error('Could not connect to Mongo DB', err))
 
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
-  });
+});
